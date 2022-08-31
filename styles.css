@@ -1,0 +1,110 @@
+body{
+    background: gray; /*#82d2e5;*/
+    height: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+h1, h2{
+    font-family: 'Roboto' , sans-serif;
+    font-weight: 100;
+    font-size: 2.6em;
+    text-transform: uppercase;
+    }
+#seconds, #tens, #scolumn{
+font-size: 2em;
+}
+button{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+    -khtml-border-radius: 5px;
+    background: #82d2e5;
+    color: #fff;
+    border: solid 1px #fff;
+    text-decoration: none;
+    cursor:pointer;
+    padding: 18px 10px;
+    width: 180px;
+    margin: 10px;
+    outline:none;
+}
+
+button:hover{
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all0.5s ease-in-out;
+    background: #fff;
+    border: solid 1px #fff;
+    color: #82d2e5;
+}
+
+#container{
+    width: 630px;
+    margin: 10px auto;
+}
+
+#container::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+[data-view="card"]{
+    transform: rotateY(180deg);
+    width:100px;
+    height: 140px;
+    border: solid 1px #d3cece;
+    border-radius: 5px;
+    float: left;
+    margin: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f3f3f3 22px, #fff 22px, #fff 24px, transparent 24px, transparent 24px, #fff 67px, #fff 69px, #fff 69px), linear-gradient(225deg, #f3f3f3 transparent 67px , #fff 67px, #fff 69px, transparent 69px) 0 64px;
+    background-color: blueviolet;
+    background-size: 64px 128px;
+}
+
+.flipped{
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg); 
+}
+
+.reserve{
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(180deg);
+}
+
+.correct{
+    opacity: 0.5;
+    cursor: default;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+}
+
+
+.correct[data-item="togo"], .flipped[data-item="togo"]{
+    background: url("togo.jpg")left center no-repeat #fff;
+    background-size: contain;
+}
+.correct[data-item="ghana"], .flipped[data-item="ghana"]{
+    background: url("ghana.jpg")left center no-repeat #fff;
+    background-size: contain;
+}
+.correct[data-item="kenya"], .flipped[data-item="kenya"]{
+    background: url("kenya.jpg")left center no-repeat #fff;
+    background-size: contain;
+}
+.correct[data-item="nigeria"], .flipped[data-item="nigeria"]{
+    background: url("nigeria.jpg")left center no-repeat #fff;
+    background-size: contain;
+}
+.correct[data-item="southAfrica"], .flipped[data-item="southAfrica"]{
+    background: url("southAfrica.jpg")left center no-repeat #fff;
+    background-size: contain;
+}
